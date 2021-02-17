@@ -18,17 +18,23 @@ const businessId = 'tnf6a9ywrnwkV6cv5SrWnA'
 //giving the yelp api key that I generated with my account to the client
 const client = yelp.client(apiKey);
    
-// using the url dictated in app.js (restaurants/oscars)
+// Using the url dictated in app.js (restaurants/oscarsID)
+// I have only added two reviews, as the yelp reviews api only allows for
+// a total of three reviews to be drawn, thus I grabbed two at my leisure
 router.get('/', (req, res, next) => {
     client.reviews(businessId).then(response => {
         const firstResult = response.jsonBody.reviews[0];
         const secondResult = response.jsonBody.reviews[2];
-        const reviewList = [firstResult, secondResult];   
+
+        const prettyJsonOne = JSON.stringify(firstResult, null, 2);
+        const prettyJsonTwo = JSON.stringify(secondResult, null, 4);
+
+        let prettyJson = [prettyJsonOne, prettyJsonTwo];
         
         //ensuring the status is 200, then printing a json object that i created
         // above that consists of the first two reviews
         res.status(200).json({
-            message: reviewList
+            message: prettyJson
         })
       });
        
