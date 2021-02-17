@@ -23,6 +23,18 @@
 // file name and have the google API print out the likelihoods for each
 // emotion
 
+
+/*
+ * I did not get the chance to properly implement this so I will explain
+ * how I think it should be done.
+ * 
+ * I believe that similar to the yelp api it will be called in the oscars.js
+ * file i have created. But in this case it might be best to reorganize
+ * my code with async functions and have a few functions like this one
+ * await for the yelp api, when that occurs we can then call this function
+ * to then analyze our image URLs, and print that information out with the 
+ * json objects we created earlier
+*/
 function googleAPIFaceDetection(fileName) {
   // [START vision_face_detection]
   // Imports the Google Cloud client library
@@ -50,4 +62,7 @@ function googleAPIFaceDetection(fileName) {
   }
   detectFaces();
   // [END vision_face_detection]
+
 }
+
+module.exports = googleAPIFaceDetection;
