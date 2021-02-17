@@ -8,12 +8,15 @@
  * printed by the console. I have included the URL for the github I
  * utilized https://github.com/Yelp/yelp-fusion/tree/master/fusion/node
  *
- *  In a scenario where I would have time I would personally 
+ * In a scenario where I would have time I would personally 
  * create request forms and do the various parts on my own, but
  * given the time constraint of 2-3 hours set by Crescendo Collective
  * I felt it in my best interest to utilize an open source resource
  * from Yelp
  * 
+ * This sample file was used to practice with the yelp api before I built my 
+ * own API endpoint. This can ignored/deleted, but I left it so that the
+ * reviewer could see some more of my process
 */
 const yelp = require('yelp-fusion');
 

@@ -1,3 +1,7 @@
+/*
+ create a local server to hold the API endpoints
+*/
+
 const http = require('http');
 const app = require('./app');
 

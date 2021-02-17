@@ -3,6 +3,7 @@ const app = express();
 
 const productRoutes = require('./api/routes/oscars');
 
-app.use('/reviews/oscars/:oscarsId', productRoutes);
+//would ideally keep this dynamic such that restaurant name could be variable
+app.use('/reviews/oscars/', productRoutes);
 
 module.exports = app;
