@@ -26,10 +26,14 @@ router.get('/', (req, res, next) => {
         const firstResult = response.jsonBody.reviews[0];
         const secondResult = response.jsonBody.reviews[2];
 
-        const prettyJsonOne = JSON.stringify(firstResult, null, 2);
-        const prettyJsonTwo = JSON.stringify(secondResult, null, 4);
+        // These two infact made them less pretty so I have commented them out
+        // for the time being until I figure out how to format the JSON
+        
+        // const prettyJsonOne = JSON.stringify(firstResult, null, 2);
+        // const prettyJsonTwo = JSON.stringify(secondResult, null, 4);
 
-        let prettyJson = [prettyJsonOne, prettyJsonTwo];
+        // let prettyJson = [prettyJsonOne, prettyJsonTwo];
+        let prettyJson = [firstResult, secondResult];
         
         //ensuring the status is 200, then printing a json object that i created
         // above that consists of the first two reviews
